@@ -20,7 +20,7 @@ def tiaozheng(text):
     completion = client_zp.chat.completions.create(
         model="glm-4-plus",
         messages=[
-            {"role": "system", "content": "### 定位：语言表述专家\n ### 任务：将具有歧视倾向或敏感表达的语句，转化为一种更抽象、隐晦的调侃方式，使其不再直接指向具体群体，从而弱化其中的攻击性与严肃性，让整体话语呈现出一种讽刺而非冒犯的语气。\n ###输出 ：只输出调整后的句子，不需要额外解释。"},
+            {"role": "system", "content": "### 定位：语言表述专家\n ### 任务：将歧视性语句换一种方法表述，让我的话变得抽象起来，变成一种抽象的调侃，从而消解到话语背后的严肃性。\n ###输出 ：只输出调整后的句子，不需要额外解释。"},
             {"role": "user", "content": text}
       ]
     )
